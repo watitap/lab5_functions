@@ -1,0 +1,101 @@
+
+
+#import Conversions function
+import Conversions
+
+# main function
+def main():
+    
+# converting Miles to Kilometers
+    attempts = 0
+    miles = float(input("\nPlease tell me how many miles you want converted to kilometers: "))
+    
+    while attempts < 2: # Check how many invalid numbers have been given
+        if miles < 0:
+            miles = float(input("You cannot enter a negative number, please enter again: "))
+            attempts += 1
+        else:
+            break
+    if attempts >= 2 and miles < 0:
+        print("Too many invalid numbers. Program has been terminated.")
+        exit()
+    else: 
+        kilometers = Conversions.milesToKm(miles)
+        print(miles, " miles is equal to ", 
+        format(kilometers,'.2f'), " kilometers.", sep ='')
+        
+# converting Gallons to liters
+    attempts = 0
+    gallons = float(input("\nPlease tell me how many gallons you want converted to liters: "))
+    
+    while attempts < 2: # Check how many invalid numbers have been given
+        if gallons < 0:
+            gallons = float(input("You cannot enter a negative number, please enter again: "))
+            attempts += 1
+        else:
+            break
+    if attempts >= 2 and gallons < 0:
+        print("Too many invalid numbers. Program has been terminated.")
+        exit()
+    else:
+        liters = Conversions.galToLit(gallons)
+        print(gallons, " gallons is equal to ",
+        format(liters,'.2f'), " liters.", sep ='')
+
+# converting Pounds to Kilograms 
+    attempts = 0
+    pounds = float(input("\nPlease tell me how many pounds you want converted to kilograms: "))
+    
+    while attempts < 2: # Check how many invalid numbers have been given
+        if pounds < 0:
+            pounds = float(input("You cannot enter a negative number, please enter again: "))
+            attempts += 1
+        else:
+            break
+    if attempts >= 2 and pounds < 0:
+        print("Too many invalid numbers. Program has been terminated.")
+        exit()
+    else:
+        kilograms = Conversions.poundsToKg(pounds)
+        print(pounds, " pounds is equal to ", 
+        format(kilograms,'.2f'), " kilograms.", sep ='')
+        
+# converting Inches to Centimeters
+    attempts = 0
+    inches = float(input("\nPlease tell me how many inches you want converted to centimeters: "))
+
+    while attempts < 2: # Check how many invalid numbers have been given
+        if inches < 0:
+            inches = float(input("You cannot enter a negative number, please enter again: "))
+            attempts += 1
+        else:
+            break
+    if attempts >= 2 and inches < 0:
+        print("Too many invalid numbers. Program has been terminated.")
+        exit()
+    else:
+        centimeters = Conversions.inchesToCm(inches)
+        print( inches, " inches is equal to ", 
+        format(centimeters, '.2f'), " centimeters.", sep ='')
+
+# converting Fahrenheit to Celsius
+    attempts = 0
+    fahrenheit = float(input("\nPlease tell me how many fahrenheit you want converted to celsius: "))
+    
+    while attempts < 2: # Check how many invalid numbers have been given
+        if fahrenheit > 1000:
+            fahrenheit = float(input("You cannot enter number higher than 1,000, please enter again: "))
+            attempts += 1
+        else:
+            break
+    if attempts >= 2 and fahrenheit > 1000:
+        print("Too many invalid numbers. Program has been terminated.")
+        exit()
+    else:
+        celsius = Conversions.fahToCel(fahrenheit)
+        print(fahrenheit, " fahrenheit is equal to ", 
+        format(celsius, '.2f'), " celsius.", sep ='')
+    
+    
+# call to main function
+main()
