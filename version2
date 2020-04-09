@@ -1,6 +1,6 @@
 
 
-#import Conversions function
+# import Conversions module
 import Conversions
 
 # main function
